@@ -1,0 +1,1863 @@
+[
+  {
+    "name": "Refund",
+    "action": "refund",
+    "source": "internet_acquiring__refund_tab0",
+    "required": [
+      "order_id"
+    ],
+    "defaults": {},
+    "endpoint": "request",
+    "fields": {
+      "amount": "Number",
+      "order_id": "String"
+    },
+    "base": "AbstractRequest",
+    "factory": [
+      "refund"
+    ],
+    "alternatives": []
+  },
+  {
+    "name": "Payment",
+    "action": "pay",
+    "source": "internet_acquiring__card_payment_tab0",
+    "required": [
+      "amount",
+      "currency",
+      "description",
+      "order_id",
+      "card",
+      "ip",
+      "phone"
+    ],
+    "defaults": {},
+    "endpoint": "request",
+    "fields": {
+      "amount": "Number",
+      "card": "String",
+      "card_cvv": "String",
+      "card_exp_month": "String",
+      "card_exp_year": "String",
+      "currency": "String",
+      "description": "String",
+      "ip": "String",
+      "order_id": "String",
+      "phone": "String",
+      "paytype": "String",
+      "tavv": "String",
+      "tid": "String",
+      "language": "String",
+      "prepare": "String",
+      "recurringbytoken": "String",
+      "result_url": "String",
+      "is_recurring": "Boolean",
+      "server_url": "String",
+      "eci": "String",
+      "cavv": "String",
+      "tdsv": "String",
+      "dsTransID": "String",
+      "split_rules": "String",
+      "split_tickets_only": "Boolean",
+      "sender_first_name": "String",
+      "sender_last_name": "String",
+      "sender_email": "String",
+      "sender_country_code": "String",
+      "sender_city": "String",
+      "sender_address": "String",
+      "sender_state": "String",
+      "sender_shipping_state": "String",
+      "sender_postal_code": "String",
+      "subscribe": "String",
+      "subscribe_date_start": "String",
+      "subscribe_periodicity": "String",
+      "customer": "String",
+      "dae": "String",
+      "info": "String",
+      "product_category": "String",
+      "product_description": "String",
+      "product_name": "String",
+      "product_url": "String"
+    },
+    "base": "AbstractRequest",
+    "factory": [
+      "payment"
+    ],
+    "alternatives": []
+  },
+  {
+    "name": "Checkout",
+    "action": "pay",
+    "source": "internet_acquiring__checkout_tab0",
+    "required": [
+      "amount",
+      "currency",
+      "description",
+      "order_id"
+    ],
+    "defaults": {},
+    "endpoint": "request",
+    "fields": {
+      "amount": "Number",
+      "currency": "String",
+      "description": "String",
+      "order_id": "String",
+      "rro_info": "Array",
+      "expired_date": "String",
+      "language": "String",
+      "paytypes": "String",
+      "result_url": "String",
+      "server_url": "String",
+      "verifycode": "String",
+      "split_rules": "String",
+      "sender_address": "String",
+      "sender_city": "String",
+      "sender_country_code": "String",
+      "sender_first_name": "String",
+      "sender_last_name": "String",
+      "sender_postal_code": "String",
+      "subscribe": "String",
+      "subscribe_date_start": "String",
+      "subscribe_periodicity": "String",
+      "customer": "String",
+      "recurringbytoken": "String",
+      "customer_user_id": "String",
+      "dae": "String",
+      "info": "String",
+      "product_category": "String",
+      "product_description": "String",
+      "product_name": "String",
+      "product_url": "String"
+    },
+    "base": "AbstractCheckoutRequest",
+    "factory": [
+      "checkout"
+    ],
+    "alternatives": []
+  },
+  {
+    "name": "Widget",
+    "action": "pay",
+    "source": "internet_acquiring__widget_tab0",
+    "required": [
+      "amount",
+      "currency",
+      "description",
+      "order_id"
+    ],
+    "defaults": {},
+    "endpoint": "request",
+    "fields": {
+      "amount": "Number",
+      "currency": "String",
+      "description": "String",
+      "order_id": "String",
+      "expired_date": "String",
+      "language": "String",
+      "paytypes": "String",
+      "result_url": "String",
+      "server_url": "String",
+      "verifycode": "String",
+      "split_rules": "String",
+      "sender_address": "String",
+      "sender_city": "String",
+      "sender_country_code": "String",
+      "sender_first_name": "String",
+      "sender_last_name": "String",
+      "sender_postal_code": "String",
+      "subscribe": "String",
+      "subscribe_date_start": "String",
+      "subscribe_periodicity": "String",
+      "customer": "String",
+      "recurringbytoken": "String",
+      "customer_user_id": "String",
+      "dae": "String",
+      "info": "String",
+      "product_category": "String",
+      "product_description": "String",
+      "product_name": "String",
+      "product_url": "String"
+    },
+    "base": "AbstractCheckoutRequest",
+    "factory": [
+      "widget"
+    ],
+    "alternatives": []
+  },
+  {
+    "name": "Donation",
+    "action": "paydonate",
+    "source": "internet_acquiring__checkout_tab0",
+    "required": [
+      "amount",
+      "currency",
+      "description",
+      "order_id"
+    ],
+    "defaults": {},
+    "endpoint": "request",
+    "fields": {
+      "amount": "Number",
+      "currency": "String",
+      "description": "String",
+      "order_id": "String",
+      "rro_info": "Array",
+      "expired_date": "String",
+      "language": "String",
+      "paytypes": "String",
+      "result_url": "String",
+      "server_url": "String",
+      "verifycode": "String",
+      "split_rules": "String",
+      "sender_address": "String",
+      "sender_city": "String",
+      "sender_country_code": "String",
+      "sender_first_name": "String",
+      "sender_last_name": "String",
+      "sender_postal_code": "String",
+      "subscribe": "String",
+      "subscribe_date_start": "String",
+      "subscribe_periodicity": "String",
+      "customer": "String",
+      "recurringbytoken": "String",
+      "customer_user_id": "String",
+      "dae": "String",
+      "info": "String",
+      "product_category": "String",
+      "product_description": "String",
+      "product_name": "String",
+      "product_url": "String"
+    },
+    "base": "AbstractCheckoutRequest",
+    "factory": [
+      "donation"
+    ],
+    "alternatives": []
+  },
+  {
+    "name": "Authorization",
+    "action": "auth",
+    "source": "internet_acquiring__checkout_tab0",
+    "required": [
+      "amount",
+      "currency",
+      "description",
+      "order_id"
+    ],
+    "defaults": {},
+    "endpoint": "request",
+    "fields": {
+      "amount": "Number",
+      "currency": "String",
+      "description": "String",
+      "order_id": "String",
+      "rro_info": "Array",
+      "expired_date": "String",
+      "language": "String",
+      "paytypes": "String",
+      "result_url": "String",
+      "server_url": "String",
+      "verifycode": "String",
+      "split_rules": "String",
+      "sender_address": "String",
+      "sender_city": "String",
+      "sender_country_code": "String",
+      "sender_first_name": "String",
+      "sender_last_name": "String",
+      "sender_postal_code": "String",
+      "subscribe": "String",
+      "subscribe_date_start": "String",
+      "subscribe_periodicity": "String",
+      "customer": "String",
+      "recurringbytoken": "String",
+      "customer_user_id": "String",
+      "dae": "String",
+      "info": "String",
+      "product_category": "String",
+      "product_description": "String",
+      "product_name": "String",
+      "product_url": "String"
+    },
+    "base": "AbstractCheckoutRequest",
+    "factory": [
+      "authorization"
+    ],
+    "alternatives": []
+  },
+  {
+    "name": "PrivatPay",
+    "action": "payment_prepare",
+    "source": "internet_acquiring__privat_pay_tab0",
+    "required": [
+      "amount",
+      "currency",
+      "description",
+      "order_id"
+    ],
+    "defaults": {},
+    "endpoint": "request",
+    "fields": {
+      "amount": "Number",
+      "currency": "String",
+      "description": "String",
+      "order_id": "String",
+      "action_payment": "String",
+      "language": "String",
+      "result_url": "String"
+    },
+    "base": "AbstractRequest",
+    "factory": [
+      "privatPay"
+    ],
+    "alternatives": []
+  },
+  {
+    "name": "ApplePay",
+    "action": "pay",
+    "source": "internet_acquiring__apay_tab0",
+    "required": [
+      "amount",
+      "currency",
+      "description",
+      "order_id"
+    ],
+    "defaults": {
+      "paytype": "apay"
+    },
+    "endpoint": "request",
+    "fields": {
+      "amount": "Number",
+      "currency": "String",
+      "description": "String",
+      "order_id": "String",
+      "phone": "String",
+      "paytype": "String",
+      "tavv": "String",
+      "language": "String",
+      "result_url": "String",
+      "server_url": "String",
+      "card": "String",
+      "card_exp_month": "String",
+      "card_exp_year": "String",
+      "eci": "String",
+      "cavv": "String",
+      "tdsv": "String",
+      "dsTransID": "String",
+      "sender_address": "String",
+      "sender_city": "String",
+      "sender_country_code": "String",
+      "sender_first_name": "String",
+      "sender_last_name": "String",
+      "sender_postal_code": "String",
+      "split_rules": "String",
+      "dae": "String",
+      "info": "String",
+      "product_category": "String",
+      "product_description": "String",
+      "product_name": "String",
+      "product_url": "String",
+      "applepay_token": "String",
+      "split_tickets_only": "Boolean"
+    },
+    "base": "AbstractRequest",
+    "factory": [
+      "applePay"
+    ],
+    "alternatives": [
+      [
+        "applepay_token"
+      ],
+      [
+        "card",
+        "tavv",
+        "card_exp_month",
+        "card_exp_year"
+      ]
+    ]
+  },
+  {
+    "name": "GooglePay",
+    "action": "pay",
+    "source": "internet_acquiring__gpay_tab0",
+    "required": [
+      "amount",
+      "currency",
+      "description",
+      "order_id"
+    ],
+    "defaults": {
+      "paytype": "gpay"
+    },
+    "endpoint": "request",
+    "fields": {
+      "amount": "Number",
+      "currency": "String",
+      "description": "String",
+      "order_id": "String",
+      "phone": "String",
+      "paytype": "String",
+      "tavv": "String",
+      "language": "String",
+      "result_url": "String",
+      "server_url": "String",
+      "card": "String",
+      "card_exp_month": "String",
+      "card_exp_year": "String",
+      "eci": "String",
+      "cavv": "String",
+      "tdsv": "String",
+      "dsTransID": "String",
+      "sender_address": "String",
+      "sender_city": "String",
+      "sender_country_code": "String",
+      "sender_first_name": "String",
+      "sender_last_name": "String",
+      "sender_postal_code": "String",
+      "split_rules": "String",
+      "dae": "String",
+      "info": "String",
+      "product_category": "String",
+      "product_description": "String",
+      "product_name": "String",
+      "product_url": "String",
+      "gpay_token": "String",
+      "split_tickets_only": "Boolean"
+    },
+    "base": "AbstractRequest",
+    "factory": [
+      "googlePay"
+    ],
+    "alternatives": [
+      [
+        "gpay_token"
+      ],
+      [
+        "card",
+        "tavv",
+        "card_exp_month",
+        "card_exp_year"
+      ]
+    ]
+  },
+  {
+    "name": "TokenPayment",
+    "action": "paytoken",
+    "source": "internet_acquiring__token_tab0",
+    "required": [
+      "amount",
+      "currency",
+      "description",
+      "order_id",
+      "card_token",
+      "ip",
+      "phone"
+    ],
+    "defaults": {},
+    "endpoint": "request",
+    "fields": {
+      "amount": "Number",
+      "card_token": "String",
+      "currency": "String",
+      "description": "String",
+      "ip": "String",
+      "order_id": "String",
+      "phone": "String",
+      "language": "String",
+      "prepare": "String",
+      "server_url": "String",
+      "split_rules": "String",
+      "split_tickets_only": "Boolean",
+      "sender_address": "String",
+      "sender_city": "String",
+      "sender_country_code": "String",
+      "sender_first_name": "String",
+      "sender_last_name": "String",
+      "sender_postal_code": "String",
+      "customer": "String",
+      "dae": "String",
+      "info": "String",
+      "product_category": "String",
+      "product_description": "String",
+      "product_name": "String",
+      "product_url": "String",
+      "is_recurring": "Boolean"
+    },
+    "base": "AbstractRequest",
+    "factory": [
+      "tokenPayment"
+    ],
+    "alternatives": []
+  },
+  {
+    "name": "Cash",
+    "action": "paycash",
+    "source": "internet_acquiring__cash_tab0",
+    "required": [
+      "amount",
+      "currency",
+      "description",
+      "order_id",
+      "ip",
+      "phone"
+    ],
+    "defaults": {},
+    "endpoint": "request",
+    "fields": {
+      "amount": "Number",
+      "currency": "String",
+      "description": "String",
+      "ip": "String",
+      "order_id": "String",
+      "phone": "String",
+      "expired_date": "String",
+      "language": "String",
+      "prepare": "String",
+      "server_url": "String",
+      "split_rules": "String",
+      "customer": "String",
+      "dae": "String",
+      "info": "String",
+      "product_category": "String",
+      "product_description": "String",
+      "product_name": "String",
+      "product_url": "String"
+    },
+    "base": "AbstractRequest",
+    "factory": [
+      "cash"
+    ],
+    "alternatives": []
+  },
+  {
+    "name": "Qr",
+    "action": "payqr",
+    "source": "internet_acquiring__qr_tab0",
+    "required": [
+      "amount",
+      "currency",
+      "description",
+      "order_id",
+      "ip"
+    ],
+    "defaults": {},
+    "endpoint": "request",
+    "fields": {
+      "amount": "Number",
+      "currency": "String",
+      "description": "String",
+      "ip": "String",
+      "order_id": "String",
+      "language": "String",
+      "prepare": "String",
+      "recurringbytoken": "String",
+      "server_url": "String",
+      "split_rules": "String",
+      "split_tickets_only": "Boolean",
+      "customer": "String",
+      "dae": "String",
+      "info": "String",
+      "product_category": "String",
+      "product_description": "String",
+      "product_name": "String",
+      "product_url": "String"
+    },
+    "base": "AbstractRequest",
+    "factory": [
+      "qr"
+    ],
+    "alternatives": []
+  },
+  {
+    "name": "StaticQr",
+    "action": "staticQrCreate",
+    "source": "internet_acquiring__qr_tab0",
+    "required": [
+      "amount",
+      "currency",
+      "description",
+      "order_id"
+    ],
+    "defaults": {},
+    "endpoint": "request",
+    "fields": {
+      "amount": "Number",
+      "currency": "String",
+      "description": "String",
+      "order_id": "String",
+      "server_url": "String",
+      "final_date": "String"
+    },
+    "base": "AbstractRequest",
+    "factory": [
+      "staticQr"
+    ],
+    "alternatives": []
+  },
+  {
+    "name": "Hold",
+    "action": "hold",
+    "source": "internet_acquiring__two_step_tab0",
+    "required": [
+      "amount",
+      "currency",
+      "description",
+      "order_id",
+      "ip",
+      "phone"
+    ],
+    "defaults": {},
+    "endpoint": "request",
+    "fields": {
+      "amount": "Number",
+      "apay_token": "String",
+      "card": "String",
+      "card_cvv": "String",
+      "card_exp_month": "String",
+      "card_exp_year": "String",
+      "currency": "String",
+      "description": "String",
+      "gpay_token": "String",
+      "ip": "String",
+      "order_id": "String",
+      "phone": "String",
+      "paytype": "String",
+      "tid": "String",
+      "language": "String",
+      "prepare": "String",
+      "recurringbytoken": "String",
+      "is_recurring": "Boolean",
+      "server_url": "String",
+      "tavv": "String",
+      "eci": "String",
+      "cavv": "String",
+      "tdsv": "String",
+      "dsTransID": "String",
+      "sender_first_name": "String",
+      "sender_last_name": "String",
+      "sender_email": "String",
+      "sender_country_code": "String",
+      "sender_city": "String",
+      "sender_address": "String",
+      "sender_state": "String",
+      "sender_shipping_state": "String",
+      "sender_postal_code": "String",
+      "split_rules": "String",
+      "customer": "String",
+      "dae": "String",
+      "info": "String"
+    },
+    "base": "AbstractRequest",
+    "factory": [
+      "hold"
+    ],
+    "alternatives": [
+      [
+        "card"
+      ],
+      [
+        "apay_token"
+      ],
+      [
+        "gpay_token"
+      ]
+    ]
+  },
+  {
+    "name": "Capture",
+    "action": "hold_completion",
+    "source": "internet_acquiring__two_step_tab0",
+    "required": [
+      "order_id",
+      "amount"
+    ],
+    "defaults": {},
+    "endpoint": "request",
+    "fields": {
+      "amount": "Number",
+      "order_id": "String",
+      "rro_info": "Array",
+      "split_tickets_only": "Boolean"
+    },
+    "base": "AbstractRequest",
+    "factory": [
+      "capture"
+    ],
+    "alternatives": []
+  },
+  {
+    "name": "Dcc",
+    "action": "pay",
+    "source": "internet_acquiring__dcc_tab0",
+    "required": [
+      "amount",
+      "currency",
+      "description",
+      "order_id",
+      "phone"
+    ],
+    "defaults": {
+      "is_dcc_debit": true
+    },
+    "endpoint": "request",
+    "fields": {
+      "amount": "Number",
+      "card": "String",
+      "card_cvv": "String",
+      "card_exp_month": "String",
+      "card_exp_year": "String",
+      "card_token": "String",
+      "currency": "String",
+      "description": "String",
+      "order_id": "String",
+      "phone": "String",
+      "language": "String",
+      "recurringbytoken": "String",
+      "result_url": "String",
+      "server_url": "String",
+      "sandbox": "String",
+      "is_dcc_debit": "Boolean",
+      "prepare": "String",
+      "sender_first_name": "String",
+      "sender_last_name": "String",
+      "sender_country_code": "String",
+      "sender_city": "String",
+      "sender_address": "String",
+      "sender_postal_code": "String"
+    },
+    "base": "AbstractRequest",
+    "factory": [
+      "dcc"
+    ],
+    "alternatives": [
+      [
+        "card"
+      ],
+      [
+        "card_token"
+      ]
+    ]
+  },
+  {
+    "name": "SubscriptionCreate",
+    "action": "subscribe",
+    "source": "internet_acquiring__subscription_tab0",
+    "required": [
+      "amount",
+      "currency",
+      "description",
+      "order_id",
+      "card",
+      "card_cvv",
+      "card_exp_month",
+      "card_exp_year",
+      "ip",
+      "phone",
+      "subscribe_date_start"
+    ],
+    "defaults": {},
+    "endpoint": "request",
+    "fields": {
+      "amount": "Number",
+      "card": "String",
+      "card_cvv": "String",
+      "card_exp_month": "String",
+      "card_exp_year": "String",
+      "currency": "String",
+      "description": "String",
+      "ip": "String",
+      "order_id": "String",
+      "phone": "String",
+      "language": "String",
+      "prepare": "String",
+      "recurringbytoken": "String",
+      "is_recurring": "Boolean",
+      "server_url": "String",
+      "subscribe": "String",
+      "subscribe_date_start": "String",
+      "subscribe_periodicity": "String",
+      "sender_address": "String",
+      "sender_city": "String",
+      "sender_country_code": "String",
+      "sender_first_name": "String",
+      "sender_last_name": "String",
+      "sender_postal_code": "String",
+      "customer": "String",
+      "dae": "String",
+      "info": "String",
+      "product_category": "String",
+      "product_description": "String",
+      "product_name": "String",
+      "product_url": "String"
+    },
+    "base": "AbstractRequest",
+    "factory": [
+      "subscriptions",
+      "create"
+    ],
+    "alternatives": []
+  },
+  {
+    "name": "SubscriptionCancel",
+    "action": "unsubscribe",
+    "source": "internet_acquiring__subscription_tab0",
+    "required": [
+      "order_id"
+    ],
+    "defaults": {},
+    "endpoint": "request",
+    "fields": {
+      "order_id": "String"
+    },
+    "base": "AbstractRequest",
+    "factory": [
+      "subscriptions",
+      "cancel"
+    ],
+    "alternatives": []
+  },
+  {
+    "name": "SubscriptionUpdate",
+    "action": "subscribe_update",
+    "source": "internet_acquiring__subscription_tab0",
+    "required": [
+      "amount",
+      "currency",
+      "description",
+      "order_id"
+    ],
+    "defaults": {},
+    "endpoint": "request",
+    "fields": {
+      "amount": "Number",
+      "currency": "String",
+      "description": "String",
+      "order_id": "String"
+    },
+    "base": "AbstractRequest",
+    "factory": [
+      "subscriptions",
+      "update"
+    ],
+    "alternatives": []
+  },
+  {
+    "name": "InvoiceCreate",
+    "action": "invoice_send",
+    "source": "internet_acquiring__invoice_tab0",
+    "required": [
+      "amount",
+      "currency",
+      "description",
+      "order_id",
+      "email",
+      "phone"
+    ],
+    "defaults": {},
+    "endpoint": "request",
+    "fields": {
+      "amount": "Number",
+      "currency": "String",
+      "description": "String",
+      "email": "String",
+      "order_id": "String",
+      "phone": "String",
+      "rro_info": "Array",
+      "action_payment": "String",
+      "expired_date": "String",
+      "goods": "String",
+      "language": "String",
+      "result_url": "String",
+      "server_url": "String"
+    },
+    "base": "AbstractRequest",
+    "factory": [
+      "invoices",
+      "create"
+    ],
+    "alternatives": []
+  },
+  {
+    "name": "InvoiceCancel",
+    "action": "invoice_cancel",
+    "source": "internet_acquiring__invoice_tab0",
+    "required": [
+      "order_id"
+    ],
+    "defaults": {},
+    "endpoint": "request",
+    "fields": {
+      "order_id": "String"
+    },
+    "base": "AbstractRequest",
+    "factory": [
+      "invoices",
+      "cancel"
+    ],
+    "alternatives": []
+  },
+  {
+    "name": "InvoiceUnits",
+    "action": "invoice_units_get_list",
+    "source": "internet_acquiring__invoice_tab0",
+    "required": [],
+    "defaults": {},
+    "endpoint": "request",
+    "fields": {
+      "hide_name_lang": "Boolean",
+      "language": "String"
+    },
+    "base": "AbstractRequest",
+    "factory": [
+      "invoices",
+      "units"
+    ],
+    "alternatives": []
+  },
+  {
+    "name": "TokenCreate",
+    "action": "token_create",
+    "source": "tokens",
+    "required": [
+      "is_debit",
+      "is_credit"
+    ],
+    "defaults": {},
+    "endpoint": "request",
+    "fields": {
+      "is_debit": "Boolean",
+      "is_credit": "Boolean",
+      "pushAccountReceipt": "String",
+      "pushdata": "String",
+      "customer": "String",
+      "card": "String",
+      "card_cvv": "String",
+      "card_exp_month": "String",
+      "card_exp_year": "String"
+    },
+    "base": "AbstractRequest",
+    "factory": [
+      "tokens",
+      "create"
+    ],
+    "alternatives": [
+      [
+        "pushAccountReceipt"
+      ],
+      [
+        "pushdata",
+        "customer"
+      ],
+      [
+        "card",
+        "card_cvv",
+        "card_exp_month",
+        "card_exp_year"
+      ]
+    ]
+  },
+  {
+    "name": "TokenCreateUnique",
+    "action": "token_create_unique",
+    "source": "tokens",
+    "required": [
+      "is_debit",
+      "is_credit"
+    ],
+    "defaults": {},
+    "endpoint": "request",
+    "fields": {
+      "is_debit": "Boolean",
+      "is_credit": "Boolean",
+      "pushAccountReceipt": "String",
+      "pushdata": "String",
+      "customer": "String",
+      "card": "String",
+      "card_cvv": "String",
+      "card_exp_month": "String",
+      "card_exp_year": "String"
+    },
+    "base": "AbstractRequest",
+    "factory": [
+      "tokens",
+      "createUnique"
+    ],
+    "alternatives": [
+      [
+        "pushAccountReceipt"
+      ],
+      [
+        "pushdata",
+        "customer"
+      ],
+      [
+        "card",
+        "card_cvv",
+        "card_exp_month",
+        "card_exp_year"
+      ]
+    ]
+  },
+  {
+    "name": "TokenUpdate",
+    "action": "token_update",
+    "source": "tokens",
+    "required": [
+      "card_token",
+      "card_token_action"
+    ],
+    "defaults": {},
+    "endpoint": "request",
+    "fields": {
+      "card_token": "String",
+      "card_token_action": "String"
+    },
+    "base": "AbstractRequest",
+    "factory": [
+      "tokens",
+      "update"
+    ],
+    "alternatives": []
+  },
+  {
+    "name": "Confirm3ds",
+    "action": "confirm",
+    "source": "confirmation__3ds",
+    "required": [
+      "confirm_token"
+    ],
+    "defaults": {},
+    "endpoint": "request",
+    "fields": {
+      "confirm_token": "String"
+    },
+    "base": "AbstractRequest",
+    "factory": [
+      "confirmations",
+      "threeDs"
+    ],
+    "alternatives": []
+  },
+  {
+    "name": "ConfirmCvv",
+    "action": "confirm",
+    "source": "confirmation__CVV",
+    "required": [
+      "confirm_token",
+      "card_cvv"
+    ],
+    "defaults": {},
+    "endpoint": "request",
+    "fields": {
+      "card_cvv": "String",
+      "confirm_token": "String"
+    },
+    "base": "AbstractRequest",
+    "factory": [
+      "confirmations",
+      "cvv"
+    ],
+    "alternatives": []
+  },
+  {
+    "name": "ConfirmOtp",
+    "action": "confirm",
+    "source": "confirmation__OTP",
+    "required": [
+      "confirm_token",
+      "otp"
+    ],
+    "defaults": {},
+    "endpoint": "request",
+    "fields": {
+      "otp": "String",
+      "confirm_token": "String"
+    },
+    "base": "AbstractRequest",
+    "factory": [
+      "confirmations",
+      "otp"
+    ],
+    "alternatives": []
+  },
+  {
+    "name": "Status",
+    "action": "status",
+    "source": "information__status_payment_tab0",
+    "required": [
+      "order_id"
+    ],
+    "defaults": {},
+    "endpoint": "request",
+    "fields": {
+      "order_id": "String"
+    },
+    "base": "AbstractRequest",
+    "factory": [
+      "information",
+      "status"
+    ],
+    "alternatives": []
+  },
+  {
+    "name": "PaymentData",
+    "action": "data",
+    "source": "information__adding_data_tab0",
+    "required": [
+      "order_id"
+    ],
+    "defaults": {},
+    "endpoint": "request",
+    "fields": {
+      "order_id": "String",
+      "info": "String"
+    },
+    "base": "AbstractRequest",
+    "factory": [
+      "information",
+      "data"
+    ],
+    "alternatives": []
+  },
+  {
+    "name": "Receipt",
+    "action": "ticket",
+    "source": "information__receive_a_receipt_tab0",
+    "required": [
+      "email",
+      "order_id"
+    ],
+    "defaults": {},
+    "endpoint": "request",
+    "fields": {
+      "email": "String",
+      "order_id": "String",
+      "payment_id": "Number",
+      "language": "String"
+    },
+    "base": "AbstractRequest",
+    "factory": [
+      "information",
+      "receipt"
+    ],
+    "alternatives": []
+  },
+  {
+    "name": "Reports",
+    "action": "reports",
+    "source": "information__payment_archive_tab0",
+    "required": [],
+    "defaults": {},
+    "endpoint": "request",
+    "fields": {
+      "resp_format": "String",
+      "date_from": "String",
+      "date_to": "String"
+    },
+    "base": "AbstractRequest",
+    "factory": [
+      "information",
+      "reports"
+    ],
+    "alternatives": []
+  },
+  {
+    "name": "Compensation",
+    "action": "reports_compensation",
+    "source": "information__register_tab0",
+    "required": [],
+    "defaults": {},
+    "endpoint": "request",
+    "fields": {
+      "compensation_id": "String",
+      "resp_format": "String",
+      "date": "String"
+    },
+    "base": "AbstractRequest",
+    "factory": [
+      "information",
+      "compensation"
+    ],
+    "alternatives": []
+  },
+  {
+    "name": "Register",
+    "action": "register",
+    "source": "information__register_tab0",
+    "required": [
+      "format",
+      "date"
+    ],
+    "defaults": {},
+    "endpoint": "request",
+    "fields": {
+      "format": "String",
+      "date": "String"
+    },
+    "base": "AbstractRequest",
+    "factory": [
+      "information",
+      "register"
+    ],
+    "alternatives": []
+  },
+  {
+    "name": "CompensationFile",
+    "action": "reports_compensation_file",
+    "source": "information__register_tab0",
+    "required": [],
+    "defaults": {},
+    "endpoint": "request",
+    "fields": {
+      "compensation_id": "String",
+      "resp_format": "String",
+      "date": "String",
+      "type": "String"
+    },
+    "base": "AbstractRequest",
+    "factory": [
+      "information",
+      "compensationFile"
+    ],
+    "alternatives": []
+  },
+  {
+    "name": "CompensationFileStatus",
+    "action": "reports_compensation_file_status",
+    "source": "information__register_tab0",
+    "required": [
+      "register_token"
+    ],
+    "defaults": {},
+    "endpoint": "request",
+    "fields": {
+      "register_token": "String"
+    },
+    "base": "AbstractRequest",
+    "factory": [
+      "information",
+      "compensationFileStatus"
+    ],
+    "alternatives": []
+  },
+  {
+    "name": "TransferToCard",
+    "action": "p2pcredit",
+    "source": "transferring_to_card_tab0",
+    "required": [
+      "amount",
+      "currency",
+      "description",
+      "order_id",
+      "ip"
+    ],
+    "defaults": {},
+    "endpoint": "request",
+    "fields": {
+      "amount": "Number",
+      "currency": "String",
+      "description": "String",
+      "ip": "String",
+      "order_id": "String",
+      "language": "String",
+      "server_url": "String",
+      "taxed": "String",
+      "receiver_account": "String",
+      "receiver_mfo": "String",
+      "receiver_okpo": "String",
+      "receiver_company": "String",
+      "receiver_card": "String",
+      "receiver_card_token": "String",
+      "sender_first_name": "String",
+      "sender_last_name": "String",
+      "sender_country_code": "String",
+      "sender_city": "String",
+      "sender_address": "String",
+      "sender_postal_code": "String",
+      "receiver_first_name": "String",
+      "receiver_last_name": "String",
+      "customer": "String",
+      "info": "String"
+    },
+    "base": "AbstractRequest",
+    "factory": [
+      "transfers",
+      "toCard"
+    ],
+    "alternatives": [
+      [
+        "receiver_card"
+      ],
+      [
+        "receiver_card_token"
+      ],
+      [
+        "receiver_account",
+        "receiver_mfo",
+        "receiver_okpo",
+        "receiver_company"
+      ]
+    ]
+  },
+  {
+    "name": "TransferToAccount",
+    "action": "p2pdebit",
+    "source": "p2pdebit_tab0",
+    "required": [
+      "amount",
+      "currency",
+      "description",
+      "order_id",
+      "phone"
+    ],
+    "defaults": {},
+    "endpoint": "request",
+    "fields": {
+      "amount": "Number",
+      "card": "String",
+      "card_cvv": "String",
+      "card_exp_month": "String",
+      "card_exp_year": "String",
+      "card_token": "String",
+      "currency": "String",
+      "description": "String",
+      "order_id": "String",
+      "phone": "String",
+      "language": "String",
+      "prepare": "String",
+      "recurringbytoken": "String",
+      "result_url": "String",
+      "server_url": "String",
+      "sandbox": "String",
+      "sender_first_name": "String",
+      "sender_last_name": "String",
+      "sender_email": "String",
+      "sender_country_code": "String",
+      "sender_city": "String",
+      "sender_address": "String",
+      "sender_state": "String",
+      "sender_shipping_state": "String",
+      "sender_postal_code": "String",
+      "mpi_eci": "Number",
+      "mpi_cres": "String"
+    },
+    "base": "AbstractRequest",
+    "factory": [
+      "transfers",
+      "toAccount"
+    ],
+    "alternatives": [
+      [
+        "card"
+      ],
+      [
+        "card_token"
+      ]
+    ]
+  },
+  {
+    "name": "MerchantCreate",
+    "action": "agent_shop_create",
+    "source": "partnership__shop_create_tab0",
+    "required": [
+      "description",
+      "email",
+      "name",
+      "phone",
+      "site"
+    ],
+    "defaults": {},
+    "endpoint": "request",
+    "fields": {
+      "description": "String",
+      "email": "String",
+      "name": "String",
+      "phone": "String",
+      "site": "String",
+      "iban": "String",
+      "company": "String",
+      "okpo": "String",
+      "amount_procent_agent": "Number",
+      "amount_static_agent": "Number",
+      "currency_static_agent": "String",
+      "can_reports": "String",
+      "can_checkout_edit": "String",
+      "logo": "String",
+      "public_phone": "String",
+      "law_okpo": "String",
+      "law_name": "String",
+      "law_iban": "String",
+      "law_contacts": "Array",
+      "law_cto_info": "Array",
+      "law_owners_info": "Array",
+      "law_co_owners_info": "Array"
+    },
+    "base": "AbstractRequest",
+    "factory": [
+      "partnerships",
+      "createMerchant"
+    ],
+    "alternatives": []
+  },
+  {
+    "name": "MerchantRegister",
+    "action": "agent_shop_register",
+    "source": "partnership__shop_create_tab0",
+    "required": [
+      "phone",
+      "email",
+      "name",
+      "iban",
+      "okpo",
+      "company",
+      "mcc_code"
+    ],
+    "defaults": {},
+    "endpoint": "request",
+    "fields": {
+      "phone": "String",
+      "email": "String",
+      "name": "String",
+      "url_site": "String",
+      "url_app_iphone": "String",
+      "url_app_android": "String",
+      "telegram": "String",
+      "viber": "String",
+      "instagram": "String",
+      "facebook": "String",
+      "iban": "String",
+      "okpo": "String",
+      "company": "String",
+      "mcc_code": "String",
+      "docs": "Array",
+      "amount_procent_agent": "Number",
+      "amount_static_agent": "Number",
+      "currency_static_agent": "String",
+      "can_reports": "String",
+      "can_checkout_edit": "String",
+      "logo": "String",
+      "url_callback_status": "String",
+      "law_okpo": "String",
+      "law_name": "String",
+      "law_iban": "String",
+      "law_contacts": "Array",
+      "law_cto_info": "Array",
+      "law_owners_info": "Array",
+      "law_co_owners_info": "Array"
+    },
+    "base": "AbstractRequest",
+    "factory": [
+      "partnerships",
+      "registerMerchant"
+    ],
+    "alternatives": []
+  },
+  {
+    "name": "MerchantEdit",
+    "action": "agent_shop_edit",
+    "source": "partnership__shop_edit_tab0",
+    "required": [
+      "description",
+      "email",
+      "merchant_public_key",
+      "name",
+      "phone",
+      "site",
+      "mcc_code"
+    ],
+    "defaults": {},
+    "endpoint": "request",
+    "fields": {
+      "description": "String",
+      "email": "String",
+      "merchant_public_key": "String",
+      "name": "String",
+      "phone": "String",
+      "site": "String",
+      "iban": "String",
+      "company": "String",
+      "mcc_code": "String",
+      "okpo": "String",
+      "amount_procent_agent": "Number",
+      "amount_static_agent": "Number",
+      "currency_static_agent": "String",
+      "can_reports": "String",
+      "can_checkout_edit": "String",
+      "logo": "String",
+      "public_phone": "String"
+    },
+    "base": "AbstractRequest",
+    "factory": [
+      "partnerships",
+      "editMerchant"
+    ],
+    "alternatives": []
+  },
+  {
+    "name": "MerchantInfo",
+    "action": "agent_info_merchant",
+    "source": "partnership__info_merchant_tab0",
+    "required": [
+      "merchant_public_key"
+    ],
+    "defaults": {},
+    "endpoint": "request",
+    "fields": {
+      "merchant_public_key": "String",
+      "language": "String"
+    },
+    "base": "AbstractRequest",
+    "factory": [
+      "partnerships",
+      "merchantInfo"
+    ],
+    "alternatives": []
+  },
+  {
+    "name": "UserInfo",
+    "action": "agent_info_user",
+    "source": "partnership__info_user_tab0",
+    "required": [
+      "phone"
+    ],
+    "defaults": {},
+    "endpoint": "request",
+    "fields": {
+      "phone": "String"
+    },
+    "base": "AbstractRequest",
+    "factory": [
+      "partnerships",
+      "userInfo"
+    ],
+    "alternatives": []
+  },
+  {
+    "name": "MccCodes",
+    "action": "agent_info_mcc_codes",
+    "source": "partnership__shop_create_tab0",
+    "required": [],
+    "defaults": {},
+    "endpoint": "request",
+    "fields": {
+      "language": "String"
+    },
+    "base": "AbstractRequest",
+    "factory": [
+      "partnerships",
+      "mccCodes"
+    ],
+    "alternatives": []
+  },
+  {
+    "name": "MccDocuments",
+    "action": "agent_info_mcc_docs",
+    "source": "partnership__shop_create_tab0",
+    "required": [
+      "mcc_code"
+    ],
+    "defaults": {},
+    "endpoint": "request",
+    "fields": {
+      "mcc_code": "Number",
+      "language": "String"
+    },
+    "base": "AbstractRequest",
+    "factory": [
+      "partnerships",
+      "mccDocuments"
+    ],
+    "alternatives": []
+  },
+  {
+    "name": "ExchangeRates",
+    "action": "",
+    "source": "public__exchange_tab0",
+    "required": [],
+    "defaults": {
+      "coursid": 5,
+      "exchange": ""
+    },
+    "endpoint": "publicExchange",
+    "fields": {
+      "coursid": "Number"
+    },
+    "base": "AbstractRequest",
+    "factory": [
+      "publicApi",
+      "exchangeRates"
+    ],
+    "alternatives": []
+  },
+  {
+    "name": "ExchangeArchive",
+    "action": "",
+    "source": "public__archive_tab0",
+    "required": [
+      "date"
+    ],
+    "defaults": {},
+    "endpoint": "publicArchive",
+    "fields": {
+      "date": "String"
+    },
+    "base": "AbstractRequest",
+    "factory": [
+      "publicApi",
+      "exchangeArchive"
+    ],
+    "alternatives": []
+  },
+  {
+    "name": "PosReceivers",
+    "action": "get_receivers",
+    "source": "POS__venue_creation",
+    "required": [
+      "req_id",
+      "id_company_in_pos",
+      "receivers"
+    ],
+    "defaults": {},
+    "endpoint": "posData",
+    "fields": {
+      "req_id": "String",
+      "id_company_in_pos": "String",
+      "receivers": "Array"
+    },
+    "base": "AbstractRequest",
+    "factory": [
+      "pos",
+      "receivers"
+    ],
+    "alternatives": []
+  },
+  {
+    "name": "PosWaiters",
+    "action": "get_waiters",
+    "source": "POS__venue_creation",
+    "required": [
+      "req_id",
+      "id_company_in_pos",
+      "waiters"
+    ],
+    "defaults": {},
+    "endpoint": "posData",
+    "fields": {
+      "req_id": "String",
+      "id_company_in_pos": "String",
+      "waiters": "Array"
+    },
+    "base": "AbstractRequest",
+    "factory": [
+      "pos",
+      "waiters"
+    ],
+    "alternatives": []
+  },
+  {
+    "name": "PosTables",
+    "action": "get_tables",
+    "source": "POS__venue_creation",
+    "required": [
+      "req_id",
+      "id_company_in_pos",
+      "halls"
+    ],
+    "defaults": {},
+    "endpoint": "posData",
+    "fields": {
+      "req_id": "String",
+      "id_company_in_pos": "String",
+      "halls": "Array"
+    },
+    "base": "AbstractRequest",
+    "factory": [
+      "pos",
+      "tables"
+    ],
+    "alternatives": []
+  },
+  {
+    "name": "PosCompanyStatus",
+    "action": "get_status_company",
+    "source": "POS__venue_status",
+    "required": [
+      "pos_name",
+      "id_company_in_pos"
+    ],
+    "defaults": {},
+    "endpoint": "posData",
+    "fields": {
+      "pos_name": "String",
+      "id_company_in_pos": "String"
+    },
+    "base": "AbstractRequest",
+    "factory": [
+      "pos",
+      "companyStatus"
+    ],
+    "alternatives": []
+  },
+  {
+    "name": "PosReceiversStatus",
+    "action": "get_status_receivers",
+    "source": "POS__venue_status",
+    "required": [
+      "pos_name",
+      "id_company_in_pos"
+    ],
+    "defaults": {},
+    "endpoint": "posData",
+    "fields": {
+      "pos_name": "String",
+      "id_company_in_pos": "String"
+    },
+    "base": "AbstractRequest",
+    "factory": [
+      "pos",
+      "receiversStatus"
+    ],
+    "alternatives": []
+  },
+  {
+    "name": "PosWaitersStatus",
+    "action": "get_status_waiters",
+    "source": "POS__venue_status",
+    "required": [
+      "pos_name",
+      "id_company_in_pos"
+    ],
+    "defaults": {},
+    "endpoint": "posData",
+    "fields": {
+      "pos_name": "String",
+      "id_company_in_pos": "String"
+    },
+    "base": "AbstractRequest",
+    "factory": [
+      "pos",
+      "waitersStatus"
+    ],
+    "alternatives": []
+  },
+  {
+    "name": "PosTablesStatus",
+    "action": "get_status_tables",
+    "source": "POS__venue_status",
+    "required": [
+      "pos_name",
+      "id_company_in_pos"
+    ],
+    "defaults": {},
+    "endpoint": "posData",
+    "fields": {
+      "pos_name": "String",
+      "id_company_in_pos": "String"
+    },
+    "base": "AbstractRequest",
+    "factory": [
+      "pos",
+      "tablesStatus"
+    ],
+    "alternatives": []
+  },
+  {
+    "name": "PosAllCompaniesStatus",
+    "action": "get_all_status_company",
+    "source": "POS__venue_status",
+    "required": [
+      "pos_name",
+      "id_company_in_pos"
+    ],
+    "defaults": {},
+    "endpoint": "posData",
+    "fields": {
+      "pos_name": "String",
+      "id_company_in_pos": "String"
+    },
+    "base": "AbstractRequest",
+    "factory": [
+      "pos",
+      "allCompaniesStatus"
+    ],
+    "alternatives": []
+  },
+  {
+    "name": "PosBills",
+    "action": "get_bills",
+    "source": "POS__order_payment",
+    "required": [
+      "status",
+      "req_id",
+      "id_company_in_pos",
+      "table_id",
+      "bills"
+    ],
+    "defaults": {},
+    "endpoint": "posCallback",
+    "fields": {
+      "status": "String",
+      "req_id": "String",
+      "id_company_in_pos": "String",
+      "table_id": "String",
+      "bills": "Array"
+    },
+    "base": "AbstractRequest",
+    "factory": [
+      "pos",
+      "bills"
+    ],
+    "alternatives": []
+  },
+  {
+    "name": "PosSplitBills",
+    "action": "split_bills",
+    "source": "POS__order_payment",
+    "required": [
+      "status",
+      "req_id",
+      "id_company_in_pos",
+      "new_bill_id"
+    ],
+    "defaults": {},
+    "endpoint": "posCallback",
+    "fields": {
+      "status": "String",
+      "req_id": "String",
+      "id_company_in_pos": "String",
+      "new_bill_id": "String"
+    },
+    "base": "AbstractRequest",
+    "factory": [
+      "pos",
+      "splitBills"
+    ],
+    "alternatives": []
+  },
+  {
+    "name": "PosRefundBill",
+    "action": "refund_bill",
+    "source": "POS__order_payment",
+    "required": [
+      "req_id",
+      "pos_system",
+      "merchant_id",
+      "payment_id"
+    ],
+    "defaults": {},
+    "endpoint": "posRequest",
+    "fields": {
+      "req_id": "String",
+      "pos_system": "String",
+      "merchant_id": "String",
+      "payment_id": "Number",
+      "bill_number": "String",
+      "receivers": "Array"
+    },
+    "base": "AbstractRequest",
+    "factory": [
+      "pos",
+      "refundBill"
+    ],
+    "alternatives": []
+  }
+]

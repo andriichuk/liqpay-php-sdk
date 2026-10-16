@@ -1,0 +1,79 @@
+{
+    "name": "andriichuk/liqpay-php-sdk",
+    "description": "Fluent PHP SDK for LiqPay API v7 with typed array responses, PSR-18 HTTP clients, checkout, subscriptions, refunds and invoices.",
+    "type": "library",
+    "license": "MIT",
+    "keywords": [
+        "liqpay",
+        "liqpay-api",
+        "liqpay-sdk",
+        "php-sdk",
+        "payment-gateway",
+        "payments",
+        "internet-acquiring",
+        "checkout",
+        "subscriptions",
+        "refunds",
+        "invoices",
+        "psr-18",
+        "phpstan",
+        "fluent"
+    ],
+    "require": {
+        "php": "^8.2",
+        "ext-hash": "*",
+        "ext-json": "*",
+        "guzzlehttp/guzzle": "^7.9",
+        "guzzlehttp/psr7": "^2.7",
+        "psr/http-client": "^1.0",
+        "psr/http-factory": "^1.0",
+        "psr/http-message": "^2.0"
+    },
+    "require-dev": {
+        "phpstan/phpstan": "^2.3.1",
+        "phpunit/phpunit": "^11.5",
+        "friendsofphp/php-cs-fixer": "^3.89"
+    },
+    "autoload": {
+        "psr-4": {
+            "Andriichuk\\LiqPay\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Andriichuk\\LiqPay\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "test": "phpunit",
+        "analyse": "phpstan analyse --debug --no-progress --memory-limit=1G",
+        "format": "php-cs-fixer fix --sequential",
+        "format:check": "php-cs-fixer fix --sequential --dry-run --diff",
+        "check": [
+            "@test",
+            "@analyse",
+            "@format:check"
+        ]
+    },
+    "config": {
+        "allow-plugins": false,
+        "sort-packages": true
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true,
+    "homepage": "https://github.com/andriichuk/liqpay-php-sdk",
+    "authors": [
+        {
+            "name": "Serhii Andriichuk",
+            "email": "andriichuk29@gmail.com",
+            "homepage": "https://github.com/andriichuk",
+            "role": "Developer"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/andriichuk/liqpay-php-sdk/issues",
+        "source": "https://github.com/andriichuk/liqpay-php-sdk",
+        "docs": "https://github.com/andriichuk/liqpay-php-sdk/blob/main/README.md",
+        "email": "andriichuk29@gmail.com"
+    }
+}

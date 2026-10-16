@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Security vulnerability
+    url: https://github.com/andriichuk/liqpay-php-sdk/security/policy
+    about: Read the private vulnerability reporting policy.
+  - name: LiqPay API documentation
+    url: https://www.liqpay.ua/en/doc/api/internet_acquiring
+    about: Consult the provider's protocol and account requirements.

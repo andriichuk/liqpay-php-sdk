@@ -1,0 +1,1216 @@
+[
+  {
+    "class": "RefundRequest",
+    "factory": [
+      "refund"
+    ],
+    "action": "refund",
+    "parameters": {
+      "order_id": "order_123",
+      "amount": "19.90"
+    },
+    "defaults": {},
+    "required": [
+      "order_id"
+    ],
+    "endpoint": "request",
+    "url": "https://www.liqpay.ua/api/request"
+  },
+  {
+    "class": "PaymentRequest",
+    "factory": [
+      "payment"
+    ],
+    "action": "pay",
+    "parameters": {
+      "amount": "19.90",
+      "currency": "UAH",
+      "description": "Тестове замовлення",
+      "order_id": "order_123",
+      "card": "4242424242424242",
+      "ip": "192.0.2.1",
+      "phone": "+380501234567"
+    },
+    "defaults": {},
+    "required": [
+      "amount",
+      "currency",
+      "description",
+      "order_id",
+      "card",
+      "ip",
+      "phone"
+    ],
+    "endpoint": "request",
+    "url": "https://www.liqpay.ua/api/request"
+  },
+  {
+    "class": "CheckoutRequest",
+    "factory": [
+      "checkout"
+    ],
+    "action": "pay",
+    "parameters": {
+      "amount": "19.90",
+      "currency": "UAH",
+      "description": "Тестове замовлення",
+      "order_id": "order_123"
+    },
+    "defaults": {},
+    "required": [
+      "amount",
+      "currency",
+      "description",
+      "order_id"
+    ],
+    "endpoint": "checkout",
+    "url": "https://www.liqpay.ua/api/3/checkout"
+  },
+  {
+    "class": "WidgetRequest",
+    "factory": [
+      "widget"
+    ],
+    "action": "pay",
+    "parameters": {
+      "amount": "19.90",
+      "currency": "UAH",
+      "description": "Тестове замовлення",
+      "order_id": "order_123"
+    },
+    "defaults": {},
+    "required": [
+      "amount",
+      "currency",
+      "description",
+      "order_id"
+    ],
+    "endpoint": "checkout",
+    "url": "https://www.liqpay.ua/api/3/checkout"
+  },
+  {
+    "class": "DonationRequest",
+    "factory": [
+      "donation"
+    ],
+    "action": "paydonate",
+    "parameters": {
+      "amount": "19.90",
+      "currency": "UAH",
+      "description": "Тестове замовлення",
+      "order_id": "order_123"
+    },
+    "defaults": {},
+    "required": [
+      "amount",
+      "currency",
+      "description",
+      "order_id"
+    ],
+    "endpoint": "checkout",
+    "url": "https://www.liqpay.ua/api/3/checkout"
+  },
+  {
+    "class": "AuthorizationRequest",
+    "factory": [
+      "authorization"
+    ],
+    "action": "auth",
+    "parameters": {
+      "amount": "19.90",
+      "currency": "UAH",
+      "description": "Тестове замовлення",
+      "order_id": "order_123"
+    },
+    "defaults": {},
+    "required": [
+      "amount",
+      "currency",
+      "description",
+      "order_id"
+    ],
+    "endpoint": "checkout",
+    "url": "https://www.liqpay.ua/api/3/checkout"
+  },
+  {
+    "class": "PrivatPayRequest",
+    "factory": [
+      "privatPay"
+    ],
+    "action": "payment_prepare",
+    "parameters": {
+      "amount": "19.90",
+      "currency": "UAH",
+      "description": "Тестове замовлення",
+      "order_id": "order_123"
+    },
+    "defaults": {},
+    "required": [
+      "amount",
+      "currency",
+      "description",
+      "order_id"
+    ],
+    "endpoint": "request",
+    "url": "https://www.liqpay.ua/api/request"
+  },
+  {
+    "class": "ApplePayRequest",
+    "factory": [
+      "applePay"
+    ],
+    "action": "pay",
+    "parameters": {
+      "amount": "19.90",
+      "currency": "UAH",
+      "description": "Тестове замовлення",
+      "order_id": "order_123",
+      "applepay_token": "apple-wallet-token"
+    },
+    "defaults": {
+      "paytype": "apay"
+    },
+    "required": [
+      "amount",
+      "currency",
+      "description",
+      "order_id"
+    ],
+    "endpoint": "request",
+    "url": "https://www.liqpay.ua/api/request"
+  },
+  {
+    "class": "GooglePayRequest",
+    "factory": [
+      "googlePay"
+    ],
+    "action": "pay",
+    "parameters": {
+      "amount": "19.90",
+      "currency": "UAH",
+      "description": "Тестове замовлення",
+      "order_id": "order_123",
+      "gpay_token": "google-wallet-token"
+    },
+    "defaults": {
+      "paytype": "gpay"
+    },
+    "required": [
+      "amount",
+      "currency",
+      "description",
+      "order_id"
+    ],
+    "endpoint": "request",
+    "url": "https://www.liqpay.ua/api/request"
+  },
+  {
+    "class": "TokenPaymentRequest",
+    "factory": [
+      "tokenPayment"
+    ],
+    "action": "paytoken",
+    "parameters": {
+      "amount": "19.90",
+      "currency": "UAH",
+      "description": "Тестове замовлення",
+      "order_id": "order_123",
+      "card_token": "sample-card_token",
+      "ip": "192.0.2.1",
+      "phone": "+380501234567"
+    },
+    "defaults": {},
+    "required": [
+      "amount",
+      "currency",
+      "description",
+      "order_id",
+      "card_token",
+      "ip",
+      "phone"
+    ],
+    "endpoint": "request",
+    "url": "https://www.liqpay.ua/api/request"
+  },
+  {
+    "class": "CashRequest",
+    "factory": [
+      "cash"
+    ],
+    "action": "paycash",
+    "parameters": {
+      "amount": "19.90",
+      "currency": "UAH",
+      "description": "Тестове замовлення",
+      "order_id": "order_123",
+      "ip": "192.0.2.1",
+      "phone": "+380501234567"
+    },
+    "defaults": {},
+    "required": [
+      "amount",
+      "currency",
+      "description",
+      "order_id",
+      "ip",
+      "phone"
+    ],
+    "endpoint": "request",
+    "url": "https://www.liqpay.ua/api/request"
+  },
+  {
+    "class": "QrRequest",
+    "factory": [
+      "qr"
+    ],
+    "action": "payqr",
+    "parameters": {
+      "amount": "19.90",
+      "currency": "UAH",
+      "description": "Тестове замовлення",
+      "order_id": "order_123",
+      "ip": "192.0.2.1"
+    },
+    "defaults": {},
+    "required": [
+      "amount",
+      "currency",
+      "description",
+      "order_id",
+      "ip"
+    ],
+    "endpoint": "request",
+    "url": "https://www.liqpay.ua/api/request"
+  },
+  {
+    "class": "StaticQrRequest",
+    "factory": [
+      "staticQr"
+    ],
+    "action": "staticQrCreate",
+    "parameters": {
+      "amount": "19.90",
+      "currency": "UAH",
+      "description": "Тестове замовлення",
+      "order_id": "order_123"
+    },
+    "defaults": {},
+    "required": [
+      "amount",
+      "currency",
+      "description",
+      "order_id"
+    ],
+    "endpoint": "request",
+    "url": "https://www.liqpay.ua/api/request"
+  },
+  {
+    "class": "HoldRequest",
+    "factory": [
+      "hold"
+    ],
+    "action": "hold",
+    "parameters": {
+      "amount": "19.90",
+      "currency": "UAH",
+      "description": "Тестове замовлення",
+      "order_id": "order_123",
+      "ip": "192.0.2.1",
+      "phone": "+380501234567",
+      "card": "sample-card"
+    },
+    "defaults": {},
+    "required": [
+      "amount",
+      "currency",
+      "description",
+      "order_id",
+      "ip",
+      "phone"
+    ],
+    "endpoint": "request",
+    "url": "https://www.liqpay.ua/api/request"
+  },
+  {
+    "class": "CaptureRequest",
+    "factory": [
+      "capture"
+    ],
+    "action": "hold_completion",
+    "parameters": {
+      "order_id": "order_123",
+      "amount": "19.90"
+    },
+    "defaults": {},
+    "required": [
+      "order_id",
+      "amount"
+    ],
+    "endpoint": "request",
+    "url": "https://www.liqpay.ua/api/request"
+  },
+  {
+    "class": "DccRequest",
+    "factory": [
+      "dcc"
+    ],
+    "action": "pay",
+    "parameters": {
+      "amount": "19.90",
+      "currency": "UAH",
+      "description": "Тестове замовлення",
+      "order_id": "order_123",
+      "phone": "+380501234567",
+      "card": "sample-card"
+    },
+    "defaults": {
+      "is_dcc_debit": true
+    },
+    "required": [
+      "amount",
+      "currency",
+      "description",
+      "order_id",
+      "phone"
+    ],
+    "endpoint": "request",
+    "url": "https://www.liqpay.ua/api/request"
+  },
+  {
+    "class": "SubscriptionCreateRequest",
+    "factory": [
+      "subscriptions",
+      "create"
+    ],
+    "action": "subscribe",
+    "parameters": {
+      "amount": "19.90",
+      "currency": "UAH",
+      "description": "Тестове замовлення",
+      "order_id": "order_123",
+      "card": "4242424242424242",
+      "card_cvv": "123",
+      "card_exp_month": "12",
+      "card_exp_year": "29",
+      "ip": "192.0.2.1",
+      "phone": "+380501234567",
+      "subscribe_date_start": "2026-11-01 10:00:00"
+    },
+    "defaults": {},
+    "required": [
+      "amount",
+      "currency",
+      "description",
+      "order_id",
+      "card",
+      "card_cvv",
+      "card_exp_month",
+      "card_exp_year",
+      "ip",
+      "phone",
+      "subscribe_date_start"
+    ],
+    "endpoint": "request",
+    "url": "https://www.liqpay.ua/api/request"
+  },
+  {
+    "class": "SubscriptionCancelRequest",
+    "factory": [
+      "subscriptions",
+      "cancel"
+    ],
+    "action": "unsubscribe",
+    "parameters": {
+      "order_id": "order_123"
+    },
+    "defaults": {},
+    "required": [
+      "order_id"
+    ],
+    "endpoint": "request",
+    "url": "https://www.liqpay.ua/api/request"
+  },
+  {
+    "class": "SubscriptionUpdateRequest",
+    "factory": [
+      "subscriptions",
+      "update"
+    ],
+    "action": "subscribe_update",
+    "parameters": {
+      "amount": "19.90",
+      "currency": "UAH",
+      "description": "Тестове замовлення",
+      "order_id": "order_123"
+    },
+    "defaults": {},
+    "required": [
+      "amount",
+      "currency",
+      "description",
+      "order_id"
+    ],
+    "endpoint": "request",
+    "url": "https://www.liqpay.ua/api/request"
+  },
+  {
+    "class": "InvoiceCreateRequest",
+    "factory": [
+      "invoices",
+      "create"
+    ],
+    "action": "invoice_send",
+    "parameters": {
+      "amount": "19.90",
+      "currency": "UAH",
+      "description": "Тестове замовлення",
+      "order_id": "order_123",
+      "email": "developer@example.com",
+      "phone": "+380501234567"
+    },
+    "defaults": {},
+    "required": [
+      "amount",
+      "currency",
+      "description",
+      "order_id",
+      "email",
+      "phone"
+    ],
+    "endpoint": "request",
+    "url": "https://www.liqpay.ua/api/request"
+  },
+  {
+    "class": "InvoiceCancelRequest",
+    "factory": [
+      "invoices",
+      "cancel"
+    ],
+    "action": "invoice_cancel",
+    "parameters": {
+      "order_id": "order_123"
+    },
+    "defaults": {},
+    "required": [
+      "order_id"
+    ],
+    "endpoint": "request",
+    "url": "https://www.liqpay.ua/api/request"
+  },
+  {
+    "class": "InvoiceUnitsRequest",
+    "factory": [
+      "invoices",
+      "units"
+    ],
+    "action": "invoice_units_get_list",
+    "parameters": {},
+    "defaults": {},
+    "required": [],
+    "endpoint": "request",
+    "url": "https://www.liqpay.ua/api/request"
+  },
+  {
+    "class": "TokenCreateRequest",
+    "factory": [
+      "tokens",
+      "create"
+    ],
+    "action": "token_create",
+    "parameters": {
+      "is_debit": true,
+      "is_credit": false,
+      "pushAccountReceipt": "sample-pushAccountReceipt"
+    },
+    "defaults": {},
+    "required": [
+      "is_debit",
+      "is_credit"
+    ],
+    "endpoint": "request",
+    "url": "https://www.liqpay.ua/api/request"
+  },
+  {
+    "class": "TokenCreateUniqueRequest",
+    "factory": [
+      "tokens",
+      "createUnique"
+    ],
+    "action": "token_create_unique",
+    "parameters": {
+      "is_debit": true,
+      "is_credit": false,
+      "pushAccountReceipt": "sample-pushAccountReceipt"
+    },
+    "defaults": {},
+    "required": [
+      "is_debit",
+      "is_credit"
+    ],
+    "endpoint": "request",
+    "url": "https://www.liqpay.ua/api/request"
+  },
+  {
+    "class": "TokenUpdateRequest",
+    "factory": [
+      "tokens",
+      "update"
+    ],
+    "action": "token_update",
+    "parameters": {
+      "card_token": "sample-card_token",
+      "card_token_action": "sample-card_token_action"
+    },
+    "defaults": {},
+    "required": [
+      "card_token",
+      "card_token_action"
+    ],
+    "endpoint": "request",
+    "url": "https://www.liqpay.ua/api/request"
+  },
+  {
+    "class": "Confirm3dsRequest",
+    "factory": [
+      "confirmations",
+      "threeDs"
+    ],
+    "action": "confirm",
+    "parameters": {
+      "confirm_token": "sample-confirm_token"
+    },
+    "defaults": {},
+    "required": [
+      "confirm_token"
+    ],
+    "endpoint": "request",
+    "url": "https://www.liqpay.ua/api/request"
+  },
+  {
+    "class": "ConfirmCvvRequest",
+    "factory": [
+      "confirmations",
+      "cvv"
+    ],
+    "action": "confirm",
+    "parameters": {
+      "confirm_token": "sample-confirm_token",
+      "card_cvv": "123"
+    },
+    "defaults": {},
+    "required": [
+      "confirm_token",
+      "card_cvv"
+    ],
+    "endpoint": "request",
+    "url": "https://www.liqpay.ua/api/request"
+  },
+  {
+    "class": "ConfirmOtpRequest",
+    "factory": [
+      "confirmations",
+      "otp"
+    ],
+    "action": "confirm",
+    "parameters": {
+      "confirm_token": "sample-confirm_token",
+      "otp": "sample-otp"
+    },
+    "defaults": {},
+    "required": [
+      "confirm_token",
+      "otp"
+    ],
+    "endpoint": "request",
+    "url": "https://www.liqpay.ua/api/request"
+  },
+  {
+    "class": "StatusRequest",
+    "factory": [
+      "information",
+      "status"
+    ],
+    "action": "status",
+    "parameters": {
+      "order_id": "order_123"
+    },
+    "defaults": {},
+    "required": [
+      "order_id"
+    ],
+    "endpoint": "request",
+    "url": "https://www.liqpay.ua/api/request"
+  },
+  {
+    "class": "PaymentDataRequest",
+    "factory": [
+      "information",
+      "data"
+    ],
+    "action": "data",
+    "parameters": {
+      "order_id": "order_123"
+    },
+    "defaults": {},
+    "required": [
+      "order_id"
+    ],
+    "endpoint": "request",
+    "url": "https://www.liqpay.ua/api/request"
+  },
+  {
+    "class": "ReceiptRequest",
+    "factory": [
+      "information",
+      "receipt"
+    ],
+    "action": "ticket",
+    "parameters": {
+      "email": "developer@example.com",
+      "order_id": "order_123"
+    },
+    "defaults": {},
+    "required": [
+      "email",
+      "order_id"
+    ],
+    "endpoint": "request",
+    "url": "https://www.liqpay.ua/api/request"
+  },
+  {
+    "class": "ReportsRequest",
+    "factory": [
+      "information",
+      "reports"
+    ],
+    "action": "reports",
+    "parameters": {},
+    "defaults": {},
+    "required": [],
+    "endpoint": "request",
+    "url": "https://www.liqpay.ua/api/request"
+  },
+  {
+    "class": "CompensationRequest",
+    "factory": [
+      "information",
+      "compensation"
+    ],
+    "action": "reports_compensation",
+    "parameters": {},
+    "defaults": {},
+    "required": [],
+    "endpoint": "request",
+    "url": "https://www.liqpay.ua/api/request"
+  },
+  {
+    "class": "RegisterRequest",
+    "factory": [
+      "information",
+      "register"
+    ],
+    "action": "register",
+    "parameters": {
+      "format": "json",
+      "date": "01.10.2026"
+    },
+    "defaults": {},
+    "required": [
+      "format",
+      "date"
+    ],
+    "endpoint": "request",
+    "url": "https://www.liqpay.ua/api/request"
+  },
+  {
+    "class": "CompensationFileRequest",
+    "factory": [
+      "information",
+      "compensationFile"
+    ],
+    "action": "reports_compensation_file",
+    "parameters": {},
+    "defaults": {},
+    "required": [],
+    "endpoint": "request",
+    "url": "https://www.liqpay.ua/api/request"
+  },
+  {
+    "class": "CompensationFileStatusRequest",
+    "factory": [
+      "information",
+      "compensationFileStatus"
+    ],
+    "action": "reports_compensation_file_status",
+    "parameters": {
+      "register_token": "1234567"
+    },
+    "defaults": {},
+    "required": [
+      "register_token"
+    ],
+    "endpoint": "request",
+    "url": "https://www.liqpay.ua/api/request"
+  },
+  {
+    "class": "TransferToCardRequest",
+    "factory": [
+      "transfers",
+      "toCard"
+    ],
+    "action": "p2pcredit",
+    "parameters": {
+      "amount": "19.90",
+      "currency": "UAH",
+      "description": "Тестове замовлення",
+      "order_id": "order_123",
+      "ip": "192.0.2.1",
+      "receiver_card": "sample-receiver_card"
+    },
+    "defaults": {},
+    "required": [
+      "amount",
+      "currency",
+      "description",
+      "order_id",
+      "ip"
+    ],
+    "endpoint": "request",
+    "url": "https://www.liqpay.ua/api/request"
+  },
+  {
+    "class": "TransferToAccountRequest",
+    "factory": [
+      "transfers",
+      "toAccount"
+    ],
+    "action": "p2pdebit",
+    "parameters": {
+      "amount": "19.90",
+      "currency": "UAH",
+      "description": "Тестове замовлення",
+      "order_id": "order_123",
+      "phone": "+380501234567",
+      "card": "sample-card"
+    },
+    "defaults": {},
+    "required": [
+      "amount",
+      "currency",
+      "description",
+      "order_id",
+      "phone"
+    ],
+    "endpoint": "request",
+    "url": "https://www.liqpay.ua/api/request"
+  },
+  {
+    "class": "MerchantCreateRequest",
+    "factory": [
+      "partnerships",
+      "createMerchant"
+    ],
+    "action": "agent_shop_create",
+    "parameters": {
+      "description": "Тестове замовлення",
+      "email": "developer@example.com",
+      "name": "sample-name",
+      "phone": "+380501234567",
+      "site": "sample-site"
+    },
+    "defaults": {},
+    "required": [
+      "description",
+      "email",
+      "name",
+      "phone",
+      "site"
+    ],
+    "endpoint": "request",
+    "url": "https://www.liqpay.ua/api/request"
+  },
+  {
+    "class": "MerchantRegisterRequest",
+    "factory": [
+      "partnerships",
+      "registerMerchant"
+    ],
+    "action": "agent_shop_register",
+    "parameters": {
+      "phone": "+380501234567",
+      "email": "developer@example.com",
+      "name": "sample-name",
+      "iban": "sample-iban",
+      "okpo": "sample-okpo",
+      "company": "sample-company",
+      "mcc_code": "sample-mcc_code"
+    },
+    "defaults": {},
+    "required": [
+      "phone",
+      "email",
+      "name",
+      "iban",
+      "okpo",
+      "company",
+      "mcc_code"
+    ],
+    "endpoint": "request",
+    "url": "https://www.liqpay.ua/api/request"
+  },
+  {
+    "class": "MerchantEditRequest",
+    "factory": [
+      "partnerships",
+      "editMerchant"
+    ],
+    "action": "agent_shop_edit",
+    "parameters": {
+      "description": "Тестове замовлення",
+      "email": "developer@example.com",
+      "merchant_public_key": "sample-merchant_public_key",
+      "name": "sample-name",
+      "phone": "+380501234567",
+      "site": "sample-site",
+      "mcc_code": "sample-mcc_code"
+    },
+    "defaults": {},
+    "required": [
+      "description",
+      "email",
+      "merchant_public_key",
+      "name",
+      "phone",
+      "site",
+      "mcc_code"
+    ],
+    "endpoint": "request",
+    "url": "https://www.liqpay.ua/api/request"
+  },
+  {
+    "class": "MerchantInfoRequest",
+    "factory": [
+      "partnerships",
+      "merchantInfo"
+    ],
+    "action": "agent_info_merchant",
+    "parameters": {
+      "merchant_public_key": "sample-merchant_public_key"
+    },
+    "defaults": {},
+    "required": [
+      "merchant_public_key"
+    ],
+    "endpoint": "request",
+    "url": "https://www.liqpay.ua/api/request"
+  },
+  {
+    "class": "UserInfoRequest",
+    "factory": [
+      "partnerships",
+      "userInfo"
+    ],
+    "action": "agent_info_user",
+    "parameters": {
+      "phone": "+380501234567"
+    },
+    "defaults": {},
+    "required": [
+      "phone"
+    ],
+    "endpoint": "request",
+    "url": "https://www.liqpay.ua/api/request"
+  },
+  {
+    "class": "MccCodesRequest",
+    "factory": [
+      "partnerships",
+      "mccCodes"
+    ],
+    "action": "agent_info_mcc_codes",
+    "parameters": {},
+    "defaults": {},
+    "required": [],
+    "endpoint": "request",
+    "url": "https://www.liqpay.ua/api/request"
+  },
+  {
+    "class": "MccDocumentsRequest",
+    "factory": [
+      "partnerships",
+      "mccDocuments"
+    ],
+    "action": "agent_info_mcc_docs",
+    "parameters": {
+      "mcc_code": 123
+    },
+    "defaults": {},
+    "required": [
+      "mcc_code"
+    ],
+    "endpoint": "request",
+    "url": "https://www.liqpay.ua/api/request"
+  },
+  {
+    "class": "ExchangeRatesRequest",
+    "factory": [
+      "publicApi",
+      "exchangeRates"
+    ],
+    "action": "",
+    "parameters": {},
+    "defaults": {
+      "coursid": 5,
+      "exchange": ""
+    },
+    "required": [],
+    "endpoint": "publicExchange",
+    "url": "https://api.privatbank.ua/p24api/pubinfo?coursid=5&exchange=&json="
+  },
+  {
+    "class": "ExchangeArchiveRequest",
+    "factory": [
+      "publicApi",
+      "exchangeArchive"
+    ],
+    "action": "",
+    "parameters": {
+      "date": "01.10.2026"
+    },
+    "defaults": {},
+    "required": [
+      "date"
+    ],
+    "endpoint": "publicArchive",
+    "url": "https://api.privatbank.ua/p24api/exchange_rates?date=01.10.2026&json="
+  },
+  {
+    "class": "PosReceiversRequest",
+    "factory": [
+      "pos",
+      "receivers"
+    ],
+    "action": "get_receivers",
+    "parameters": {
+      "req_id": "sample-req_id",
+      "id_company_in_pos": "sample-id_company_in_pos",
+      "receivers": []
+    },
+    "defaults": {},
+    "required": [
+      "req_id",
+      "id_company_in_pos",
+      "receivers"
+    ],
+    "endpoint": "posData",
+    "url": "https://tradingpoints.privatbank.ua/trading-points/horeca/api/pos/data"
+  },
+  {
+    "class": "PosWaitersRequest",
+    "factory": [
+      "pos",
+      "waiters"
+    ],
+    "action": "get_waiters",
+    "parameters": {
+      "req_id": "sample-req_id",
+      "id_company_in_pos": "sample-id_company_in_pos",
+      "waiters": []
+    },
+    "defaults": {},
+    "required": [
+      "req_id",
+      "id_company_in_pos",
+      "waiters"
+    ],
+    "endpoint": "posData",
+    "url": "https://tradingpoints.privatbank.ua/trading-points/horeca/api/pos/data"
+  },
+  {
+    "class": "PosTablesRequest",
+    "factory": [
+      "pos",
+      "tables"
+    ],
+    "action": "get_tables",
+    "parameters": {
+      "req_id": "sample-req_id",
+      "id_company_in_pos": "sample-id_company_in_pos",
+      "halls": []
+    },
+    "defaults": {},
+    "required": [
+      "req_id",
+      "id_company_in_pos",
+      "halls"
+    ],
+    "endpoint": "posData",
+    "url": "https://tradingpoints.privatbank.ua/trading-points/horeca/api/pos/data"
+  },
+  {
+    "class": "PosCompanyStatusRequest",
+    "factory": [
+      "pos",
+      "companyStatus"
+    ],
+    "action": "get_status_company",
+    "parameters": {
+      "pos_name": "sample-pos_name",
+      "id_company_in_pos": "sample-id_company_in_pos"
+    },
+    "defaults": {},
+    "required": [
+      "pos_name",
+      "id_company_in_pos"
+    ],
+    "endpoint": "posData",
+    "url": "https://tradingpoints.privatbank.ua/trading-points/horeca/api/pos/data"
+  },
+  {
+    "class": "PosReceiversStatusRequest",
+    "factory": [
+      "pos",
+      "receiversStatus"
+    ],
+    "action": "get_status_receivers",
+    "parameters": {
+      "pos_name": "sample-pos_name",
+      "id_company_in_pos": "sample-id_company_in_pos"
+    },
+    "defaults": {},
+    "required": [
+      "pos_name",
+      "id_company_in_pos"
+    ],
+    "endpoint": "posData",
+    "url": "https://tradingpoints.privatbank.ua/trading-points/horeca/api/pos/data"
+  },
+  {
+    "class": "PosWaitersStatusRequest",
+    "factory": [
+      "pos",
+      "waitersStatus"
+    ],
+    "action": "get_status_waiters",
+    "parameters": {
+      "pos_name": "sample-pos_name",
+      "id_company_in_pos": "sample-id_company_in_pos"
+    },
+    "defaults": {},
+    "required": [
+      "pos_name",
+      "id_company_in_pos"
+    ],
+    "endpoint": "posData",
+    "url": "https://tradingpoints.privatbank.ua/trading-points/horeca/api/pos/data"
+  },
+  {
+    "class": "PosTablesStatusRequest",
+    "factory": [
+      "pos",
+      "tablesStatus"
+    ],
+    "action": "get_status_tables",
+    "parameters": {
+      "pos_name": "sample-pos_name",
+      "id_company_in_pos": "sample-id_company_in_pos"
+    },
+    "defaults": {},
+    "required": [
+      "pos_name",
+      "id_company_in_pos"
+    ],
+    "endpoint": "posData",
+    "url": "https://tradingpoints.privatbank.ua/trading-points/horeca/api/pos/data"
+  },
+  {
+    "class": "PosAllCompaniesStatusRequest",
+    "factory": [
+      "pos",
+      "allCompaniesStatus"
+    ],
+    "action": "get_all_status_company",
+    "parameters": {
+      "pos_name": "sample-pos_name",
+      "id_company_in_pos": "sample-id_company_in_pos"
+    },
+    "defaults": {},
+    "required": [
+      "pos_name",
+      "id_company_in_pos"
+    ],
+    "endpoint": "posData",
+    "url": "https://tradingpoints.privatbank.ua/trading-points/horeca/api/pos/data"
+  },
+  {
+    "class": "PosBillsRequest",
+    "factory": [
+      "pos",
+      "bills"
+    ],
+    "action": "get_bills",
+    "parameters": {
+      "status": "sample-status",
+      "req_id": "sample-req_id",
+      "id_company_in_pos": "sample-id_company_in_pos",
+      "table_id": "sample-table_id",
+      "bills": []
+    },
+    "defaults": {},
+    "required": [
+      "status",
+      "req_id",
+      "id_company_in_pos",
+      "table_id",
+      "bills"
+    ],
+    "endpoint": "posCallback",
+    "url": "https://qr.liqpay.ua/api/extcallback"
+  },
+  {
+    "class": "PosSplitBillsRequest",
+    "factory": [
+      "pos",
+      "splitBills"
+    ],
+    "action": "split_bills",
+    "parameters": {
+      "status": "sample-status",
+      "req_id": "sample-req_id",
+      "id_company_in_pos": "sample-id_company_in_pos",
+      "new_bill_id": "sample-new_bill_id"
+    },
+    "defaults": {},
+    "required": [
+      "status",
+      "req_id",
+      "id_company_in_pos",
+      "new_bill_id"
+    ],
+    "endpoint": "posCallback",
+    "url": "https://qr.liqpay.ua/api/extcallback"
+  },
+  {
+    "class": "PosRefundBillRequest",
+    "factory": [
+      "pos",
+      "refundBill"
+    ],
+    "action": "refund_bill",
+    "parameters": {
+      "req_id": "sample-req_id",
+      "pos_system": "sample-pos_system",
+      "merchant_id": "sample-merchant_id",
+      "payment_id": 123
+    },
+    "defaults": {},
+    "required": [
+      "req_id",
+      "pos_system",
+      "merchant_id",
+      "payment_id"
+    ],
+    "endpoint": "posRequest",
+    "url": "https://qr.liqpay.ua/api/extapi/request"
+  }
+]
